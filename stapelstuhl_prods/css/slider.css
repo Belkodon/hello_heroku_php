@@ -1,11 +1,20 @@
 /*
 	Design J.Stevens 
 	derivate product based on adjusted work from
-	Author: Ahmed Ashfaq at Reverie Tech.
+	Author: Ahmed Ashfaq at Reverie Tech. and others
 	...
 */
 
 @charset "utf-8";
+
+.tootip .typo {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	}
 
 iframe{
     overflow:hidden;
@@ -92,7 +101,7 @@ h1 {
     font-size: 2.2em;
     font-weight: normal;
     text-align: left;
-    text-indent: 20px;
+    margin-left: 20px;
     line-height: 1em;
     color: #fff;
     padding-top:24px;
@@ -122,7 +131,8 @@ p { line-height:20px; color:#ffffff;
     margin-left: 20px;
     min-height: 110px;
     margin-right:10px;
-} 	
+    position: relative;
+	} 	
 	/* */
 
 
@@ -218,7 +228,7 @@ header ul li label {
 	-moz-transition: all 0.5s ease-out;
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
-}
+	}
 
 .slide img {
 	width: 100%;
@@ -242,18 +252,19 @@ header ul li label {
 #slide6:checked ~ #reveslides .animation { margin-left: -500%; }
 #slide7:checked ~ #reveslides .animation { margin-left: -600%; }
 
+
+
 /*Tooltip*/
-#reveslides .tooltip { left:0px; height:100px;  } /* + */ }
+#reveslides .tooltip { left:0px; height:100px; /* + */ }
 #reveslides .tooltip h1 {
 	color: #fff;
 	font-size: 1.9em; /* */
 	font-weight: 600; /* ? ? ? */
 	line-height: 53px; /* */
-	text-indent: 4%;
 	text-align: left;
 	/*	opacity: 0 !important; */ /* + */ 
-
-}
+	position: relative;
+	}
 .typo {
 	opacity: 0; /* + */
 	}
@@ -304,19 +315,19 @@ header ul li label {
 #slide4:checked ~ #reveslides .tooltip, 
 #slide5:checked ~ #reveslides .tooltip,
 #slide6:checked ~ #reveslides .tooltip,
-#slide7:checked ~ #reveslides .tooltip {	
+#slide7:checked ~ #reveslides .tooltip {
+	background-color: rgb(1, 1, 1);	
 	height: auto; /* 60 zu 81px */
-	min-height: 100px;
-	background:rgb(1,1,1); 
-}
+	min-height: 100px; }
+
 
 /* CONTROLE L + R */
 #controls {
-	margin: -46% auto auto 0; /* */
+	margin: -41% auto auto 0; /* */
 	width: 100%;
-	height: 50px;
+	/* height: 50px; */
 	float: left;
-	z-index: 1000;
+	z-index: 10000;
 }
 
 #controls label { 
@@ -328,7 +339,7 @@ header ul li label {
 
 }
 
-.overlapingDiv { width: 100%; float:left; margin-top: -180px;  } /* */
+.overlapingDiv { width: 100%; float:left; position: relative;  } /* */
 
 #active {
 	clear: both;
@@ -399,7 +410,7 @@ header ul li label {
 #desktop:checked ~ #wrapper .message { max-width: 778px; } /* + */
 #desktop:checked ~ #wrapper #controls { 
 	transform:scale(1);
-    margin-top: -30%; /* + */
+    margin-top: -56%; /* + */
     width: 90.2%;
 	} /* + */
 #desktop:checked ~ #wrapper #controls label { 
@@ -409,17 +420,60 @@ header ul li label {
 #desktop:checked ~ #wrapper .logo { max-width: 250px; } /* + */
 #desktop:checked ~ #wrapper .header1 { height: 134px; } /* + */
 
+/* tooltip in different place and way */	
+#desktop:checked ~ #wrapper #reveslides .tooltip {
+	height: 768px;
+	float: right;
+	width: 270px;
+	margin-top: -768px;
+	position: relative;
+	display: none;
+	background: none;
+	}
+#desktop:checked ~ #wrapper .overlapingDiv { bottom: 783px }
+	
+#desktop:checked ~ #wrapper #reveslides .tooltip .bgcolor { 
+	background:rgb(255,255,255);  
+	width:100%;
+	height:100%;
+	position: absolute;
+	z-index:0;	
+	opacity: 0.5;
+	}
+/* hide / show	*/
+#desktop:checked ~ #wrapper .overlapingDiv .showme2 { 
+	position: relative; width:20px; height:20px; display: block; margin:5px; 
+	background-color: rgb(255, 255, 255);
+    border-radius: 0 0 5px 5px;
+    display: block;
+    float: right;
+    height: auto;
+    width: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+	padding: 0 5px 1px 5px;
+    position: relative;
+    right: 217px;
+	}
+#desktop:checked ~ #wrapper #reveslides .typo h1,
+#desktop:checked ~ #wrapper #reveslides .typo p { color: rgb(1,1,1); }
+/*
 #fullwidth:checked ~ #wrapper { width:auto; }
+*/
 
 /* TABLET */
 #tablet:checked ~ #wrapper,
 #tablet:checked ~ footer,
 #tablet:checked ~ #wrapper .message  { max-width: 659px; }
 #tablet:checked ~ #wrapper #active { margin: 0 0 0; }
-#tablet:checked ~ #wrapper #controls label { margin-top: -40px; }
+#tablet:checked ~ #wrapper .overlapingDiv { bottom: 202px; }
 #tablet:checked ~ #wrapper #controls { width: 92.3%; margin-left:4%; transform:scale(0.9);} /* + */
 #tablet:checked ~ #wrapper .logo { max-width: 250px; } /* + */
 #tablet:checked ~ #wrapper .header1 { height: 134px; } /* + */
+#tablet:checked ~ #wrapper .overlapingDiv .showme2 { display:none; }
+#tablet:checked ~ #wrapper #reveslides #hide .animation .slide .tooltip { display:block; }
 
 /* #tablet:checked ~ #slider #controls { } */
 
@@ -427,11 +481,13 @@ header ul li label {
 #mobile:checked ~ #wrapper,
 #mobile:checked ~ footer { max-width: 500px; height:auto;}
 #mobile:checked ~ #wrapper .message { max-width: 500px; } /* + */ 
-#mobile:checked ~ #wrapper #active { margin: 0 0 0; }
+#mobile:checked ~ #wrapper .overlapingDiv { margin-top: -203px; }
 #mobile:checked ~ #wrapper #controls label { margin-top: -137px; }
+#mobile:checked ~ #wrapper #active { margin: 0 0 0; }
 #mobile:checked ~ #wrapper #controls { width: 108.25%; margin-left:-4%; transform:scale(0.75);} /* + */
 #mobile:checked ~ #wrapper .logo { max-width: 230px; } /* + */
-
+#mobile:checked ~ #wrapper .overlapingDiv .showme2 { display:none;}
+#mobile:checked ~ #wrapper #reveslides #hide .animation .slide .tooltip { display:block; }
 
 /* FULLSCREEN (STRETCH) */
 #fullwidth:checked ~ #wrapper { margin: 0 auto 160px; }

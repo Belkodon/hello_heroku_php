@@ -40,6 +40,34 @@
 					});
 				});
 	</script>
+	<!-- show / hide  by adding class //-->
+	<!--
+	<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        /* $('.tooltip').addClass("hidden"); */
+        
+        $('.showme2').mouseover(function() {
+            	$('.tooltip').removeClass("hidden").addClass("visible");
+        });
+    });
+	</script>
+	//-->
+	
+	<!-- show / hide directly //-->
+	<script type="text/javascript" language="javascript">
+			$(document).ready(function(){
+	  			$(".showme2").click(function(){ $(".tooltip").toggle(); });
+			
+			
+			$('.mobile').click(function() { $('.tooltip').show(); });			
+			$('.tablet').click(function() { $('.tooltip').show(); });			
+			
+			
+			});
+	</script>
+
+	
+	
 	<!--  doubleclick solution  //-->
 	<script type="text/javascript" src="/plugins/socialshareprivacy/js/jquery.js"></script> 
   	<script type="text/javascript" src="/plugins/socialshareprivacy/js/jquery.socialshareprivacy.js"></script>
@@ -144,6 +172,7 @@
 						<img src="presenting/stapelstuhl_berlin_catering_768x768_wom_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>
 								<h1>Stapelstuhl "Berlin Catering"</h1>
 								<p>
 								die wirtschaftliche Lösung – ideal für Cateringservice & Verleih<br>
@@ -161,12 +190,12 @@
 						<img src="presenting/stapelstuhl_bankettstuhl_berlin_deluxe_schwarz_768x768_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>							
 								<h1>Bankettstuhl "Berlin Deluxe"</h1>
 								<p>
 								der Stapelstuhl in der Luxus-Variante – ideal für Saalbetriebe oder als Konferenzstuhl
 								– extrem belastbar im klassischen Hammerschlag-Anthrazit – mit Polsterung in hoher Stauchhärte 
 								– als Standardmodell in 4 Farben erhältlich – Konfektionierung nicht ausgeschlossen !<br>
-
 								
 								
 								</p>
@@ -177,6 +206,7 @@
 						<img src="presenting/stapelstuhl_berlin_brilliant_768x768_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>
 								<h1>Stapelstuhl "Berlin Brilliant"</h1>
 								<p>
 								Dieses gepolsterte Bankettstuhl Modell in zeitlosem Design ist besonders geeignet für den Bereich Gastronomie 
@@ -190,6 +220,7 @@
 						<img src="presenting/stuhlwagen_stuhltransporter_rollwagen_stapelstuhl_bankettstuhl_768x768_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>
 								<h1>Stuhl Transporter / Stuhlwagen</h1>
 								<p>
 								Diese edle High-End Stuhlkarre ist für die komfortable u. schnelle Saalbestuhlung unabdingbar
@@ -204,6 +235,7 @@
 						<img src="presenting/Transportwagen_Rollwagen_768x768_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>
 								<h1>Transportwagen / Rollwagen</h1>
 								<p>
 								Dieses Transportgerät ist das <b>Nonplusultra</b> – besonders geeignet für den Transport von Klapptischen &
@@ -218,6 +250,7 @@
 						<img src="presenting/klapptisch_buche_klapptische_Xtreme_stapelstuhl-discount24_design_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>
 								<h1>Klapptisch Modell "Xtreme"</h1>
 								<p>
 								Unser Allrounder Basismodell, hier in Buche – ausgestattet mit robuster 22mm Tischplatte,
@@ -232,6 +265,7 @@
 						<img src="presenting/banketttisch_molton_180_durchmesser_768x768_JST014.jpg">
 						<div class="tooltip">
 							<div class="typo">
+								<div class="bgcolor"></div>
 								<h1>Klapptisch / Banketttisch "Molton"</h1>
 								<p>
 								Die Banketttische Typ "Molton" sind für sämtliche Festivitäten und Saalmöblierungen
@@ -267,9 +301,12 @@
 					<label for="slide5"></label>
 					<label for="slide6"></label>
 					<label for="slide7"></label>
+					<div class="showme2">Info</div>
+
 				</div>	
 				<div class="clear"></div>			    
 			</div>
+			
 			
 		  	<!-- Social Share Buttons //-->
 			<div style="border:1px solid #ccc; width:100%; height:40px; margin: 25px 0 0 0; display: block; clear: both; ">
