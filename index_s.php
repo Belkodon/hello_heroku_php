@@ -4,7 +4,7 @@
 
 	<script type="text/javascript">
 		<!--
-		   window.location="http://xn--gnstig-3ya.stapelstuhl.de";
+		   window.location="https://secret-depths-4772.herokuapp.com/stapelstuhl_prods/";
 		//-->
 	</script>
 
@@ -12,7 +12,7 @@
 <body>
 
 <?php
-	header( 'Location: http://xn--gnstig-3ya.stapelstuhl.de' ); 
+	header( 'Location: https://secret-depths-4772.herokuapp.com/stapelstuhl_prods/' ); 
 ?>
 
 </body>
