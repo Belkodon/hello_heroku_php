@@ -13,8 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="css/slider.css">
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/latest/jquery.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+	<script type="text/javascript" src="js/1.7.2/jquery.min.js"></script>
+		
 	<script type="text/javascript" language="javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 	<script type="text/javascript" language="javascript">
 	    FB.init({
@@ -40,18 +40,6 @@
 					});
 				});
 	</script>
-	<!-- show / hide  by adding class //-->
-	<!--
-	<script type="text/javascript" language="javascript">
-    $(document).ready(function(){
-        /* $('.tooltip').addClass("hidden"); */
-        
-        $('.showme2').mouseover(function() {
-            	$('.tooltip').removeClass("hidden").addClass("visible");
-        });
-    });
-	</script>
-	//-->
 	
 	<!-- show / hide directly //-->
 	<script type="text/javascript" language="javascript">
@@ -69,8 +57,8 @@
 	
 	
 	<!--  doubleclick solution  //-->
-	<script type="text/javascript" src="/plugins/socialshareprivacy/js/jquery.js"></script> 
-  	<script type="text/javascript" src="/plugins/socialshareprivacy/js/jquery.socialshareprivacy.js"></script>
+	<script type="text/javascript" src="plugins/socialshareprivacy/js/jquery.js"></script> 
+  	<script type="text/javascript" src="plugins/socialshareprivacy/js/jquery.socialshareprivacy.js"></script>
  	<script type="text/javascript">
 	    jQuery(document).ready(function($){
 	      if($('#socialshareprivacy').length > 0){
@@ -80,8 +68,8 @@
 			        twitter : { 'status' : 'off' },
 				    gplus : { 'status' : 'off' }
 		        },    		        	
-		        "css_path"  : "/plugins/socialshareprivacy/css/socialshareprivacy.css",
-		        "lang_path" : "/plugins/socialshareprivacy/lang/",
+		        "css_path"  : "plugins/socialshareprivacy/css/socialshareprivacy.css",
+		        "lang_path" : "plugins/socialshareprivacy/lang/",
 		        "language"  : "de"
 	        });
 	      }
