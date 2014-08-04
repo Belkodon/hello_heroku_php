@@ -15,7 +15,13 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/latest/jquery.js"></script>
 	<script type="text/javascript" src="js/1.7.2/jquery.min.js"></script>
 		
+	<!--
 	<script type="text/javascript" language="javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+	//-->
+	<!-- made available locally //-->
+	<script type="text/javascript" src="js/facebook/all.js"></script>
+	
+	
 	<script type="text/javascript" language="javascript">
 	    FB.init({
 	        appId: '1435562480042734',
